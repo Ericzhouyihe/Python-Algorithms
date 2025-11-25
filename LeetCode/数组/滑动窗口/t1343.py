@@ -10,9 +10,9 @@ class Solution:
         index = k - 1
         for i in range(k - 1):
             sum += arr[i]
-        while (index < len(arr)):
+        while index < len(arr):
             sum += arr[index]
-            if (sum / k >= threshold):
+            if sum / k >= threshold:
                 ans += 1
             sum -= arr[index - k + 1]
             index+=1
