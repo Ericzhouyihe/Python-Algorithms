@@ -1,11 +1,6 @@
 from typing import Optional
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
+from LeetCode.链表.ListNode import print_list, create_linked_list, ListNode
 
 class Solution:
     # 迭代法
@@ -27,27 +22,6 @@ class Solution:
         head.next.next = head
         head.next = None
         return newNode
-
-
-# for test
-# 辅助函数：打印链表
-def print_list(head: Optional[ListNode]):
-    current = head
-    while current:
-        print(current.val, end=" -> ")
-        current = current.next
-    print("None")
-
-# 辅助函数：创建链表
-def create_linked_list(values):
-    if not values:
-        return None
-    head = ListNode(values[0])
-    current = head
-    for value in values[1:]:
-        current.next = ListNode(value)
-        current = current.next
-    return head
 
 # 测试用例
 if __name__ == "__main__":
