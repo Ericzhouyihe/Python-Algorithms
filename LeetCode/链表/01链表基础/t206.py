@@ -1,6 +1,7 @@
 from typing import Optional
 
-from LeetCode.链表.ListNode import print_list, create_linked_list, ListNode
+from LeetCode.链表.LinkedList import create_linked_list, print_list
+from LeetCode.链表.ListNode import  ListNode
 
 class Solution:
     # 迭代法
