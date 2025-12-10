@@ -1,6 +1,6 @@
 from typing import Optional
 
-from LeetCode.链表.LinkedList import create_linked_list
+from LeetCode.链表.LinkedList import create_linked_list, print_list
 from LeetCode.链表.ListNode import ListNode
 
 
@@ -20,8 +20,8 @@ if __name__ == "__main__":
     solution = Solution()
 
     # 测试用例1：普通链表
-    values1 = [1, 2, 3, 4, 5]
-    head1 = create_linked_list(values1)
+    values = [1, 2, 3, 4, 5]
+    head1 = create_linked_list(values)
     print("原始链表：", end=" ")
     print_list(head1)
     reversed_head1 = solution.removeElements(head1, 2)

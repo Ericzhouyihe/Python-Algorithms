@@ -18,13 +18,13 @@ def print_list(head: Optional[ListNode]):
 
 
 # 根据 data 列表初始化一个新链表
-def create_linked_list(self, data):
+def create_linked_list(data):
     if not data:
         # 如果输入数据为空，直接返回，不创建链表
         return
     # 创建头节点，并将 head 指向头节点
-    self.head = ListNode(data[0])
-    cur = self.head  # cur 用于指向当前链表的尾节点
+    head = ListNode(data[0])
+    cur = head  # cur 用于指向当前链表的尾节点
     # 依次遍历 data 中剩余的元素，逐个创建新节点并连接到链表尾部
     for i in range(1, len(data)):
         node = ListNode(data[i])  # 创建新节点
@@ -98,6 +98,7 @@ def change(self, index, val):
 
     # 修改第 index 个节点的值为 val
     cur.val = val
+
 
 # 链表删除元素
 def removeInside(self, index):
