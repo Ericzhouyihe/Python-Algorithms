@@ -26,7 +26,7 @@ class Solution:
             cur = cur.next
 
         dummy_head = ListNode(-1)
-        dummy_head.next = head
+        cur = dummy_head
 
         for i in range(size):
             while counts[i] > 0:
