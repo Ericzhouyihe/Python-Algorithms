@@ -4,7 +4,6 @@
 整数除法仅保留整数部分。
 """
 
-
 class Solution:
     def calculate(self, s: str) -> int:
         size = len(s)
