@@ -15,13 +15,14 @@ class Solution:
             if s[i] != ' ' and s[i].isdigit():
                 num = num * 10 + ord(s[i]) - ord('0')
             if i == n - 1 or s[i] in '+-*/':
-                stack.append(num)
-            elif perSign == '-':
-                stack.append(-num)
-            elif perSign == '*':
-                stack.append(stack.pop() * num)
-            else:
-                stack.append(int(stack.pop() / num))
-            perSign = s[i]
-            num = 0
+                if perSign == '+':
+                    stack.append(num)
+                elif perSign == '-':
+                    stack.append(-num)
+                elif perSign == '*':
+                    stack.append(stack.pop() * num)
+                else:
+                    stack.append(int(stack.pop() / num))
+                perSign = s[i]
+                num = 0
         return sum(stack)
