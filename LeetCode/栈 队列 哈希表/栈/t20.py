@@ -6,8 +6,6 @@
 左括号必须以正确的顺序闭合。
 每个右括号都有一个对应的相同类型的左括号。
 """
-
-
 class Solution:
     def isValid(self, s: str) -> bool:
         if len(s) % 2 == 1:
