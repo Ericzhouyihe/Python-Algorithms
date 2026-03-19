@@ -13,7 +13,7 @@ start = time.time()
 
 count = 1
 
-while count < 1000000:
+while count < 100000:
     fibo(20)
     count += 1
 
