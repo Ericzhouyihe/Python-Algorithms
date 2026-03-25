@@ -1,5 +1,6 @@
 import time
 
+
 def fibo(i):
     if i == 0:
         return 0
@@ -7,6 +8,7 @@ def fibo(i):
         return 1
     else:
         return fibo(i - 1) + fibo(i - 2)
+
 
 # 记录开始时间
 start = time.time()
@@ -25,4 +27,3 @@ duration_ms = end - start
 
 # 1277秒
 print(f"程序运行时间：{duration_ms} 秒")
-
