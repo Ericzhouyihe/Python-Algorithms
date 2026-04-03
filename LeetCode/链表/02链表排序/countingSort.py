@@ -2,6 +2,7 @@ from LeetCode.链表.ListNode import ListNode
 
 
 class Solution:
+    # 计数排序
     def countingSort(self, head: ListNode):
         if not head or not head.next:
             return head
