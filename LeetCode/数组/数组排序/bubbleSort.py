@@ -1,6 +1,9 @@
 class Solution:
     def bubbleSort(self, nums: list[int]) -> list[int]:
-        """冒泡排序算法实现"""
+        """
+        冒泡排序算法实现
+        没次循环依次比较并交换, 将最大的交换到最后 或 将最小的交换到最前面
+        """
         n = len(nums)
         # 外层循环控制趟数，每一趟将当前未排序区间的最大值「冒泡」到末尾
         for i in range(n - 1):

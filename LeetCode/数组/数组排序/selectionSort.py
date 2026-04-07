@@ -1,6 +1,9 @@
 class Solution:
     def selectionSort(self, nums: list[int]) -> list[int]:
-        """选择排序算法实现"""
+        """
+        选择排序算法实现
+        每次在未排序的序列里找到最小值放到最前面, 或者找到最大值放到最后, 然后缩小未排序序列
+        """
         n = len(nums)
         for i in range(n - 1):
             min_i = i
