@@ -5,8 +5,8 @@ class Solution:
     def quickSort(self, nums, l, r) -> list[int]:
         if l < r:
             i = self.randomPartition(nums, l, r)
-            self.quickSort(nums, l, i)
-            self.quickSort(nums, i, r)
+            self.quickSort(nums, l, i - 1)
+            self.quickSort(nums, i + 1, r)
 
         return nums
 
@@ -18,9 +18,8 @@ class Solution:
         # 随机将基准数移到首位，后续进行分区操作
         return self.partition(nums, low, high)
 
-
     def partition(self, nums, low, high):
-        pivot = nums[0]
+        pivot = nums[low]
         i, j = low, high
         while i < j:
             while i < j and nums[j] >= pivot:
@@ -28,11 +27,13 @@ class Solution:
             while i < j and nums[i] <= pivot:
                 i += 1
 
-        nums[i], nums[j] = nums[j], nums[i]
+            nums[i], nums[j] = nums[j], nums[i]
+
+        nums[i], nums[low] = nums[low], nums[i]
         return i
 
 
 arr = [1, 9, 7, 5, 3, 6, 4]
 s = Solution()
-s.quickSort(arr, 0, len(arr))
+s.quickSort(arr, 0, len(arr) - 1)
 print(arr)
