@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07336b64-fdbb-4d96-b126-2623bc7f65a4" name="更改" comment="feat(sorting): 实现归并排序和快速排序算法&#10;&#10;- 添加归并排序算法实现，包括分解和合并过程&#10;- 实现快速排序算法，支持随机基准值选择&#10;- 添加测试用例验证排序功能正确性&#10;- 提供完整的排序算法演示代码">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="07336b64-fdbb-4d96-b126-2623bc7f65a4" name="更改" comment="feat(sorting): 实现归并排序和快速排序算法&#10;&#10;- 添加归并排序算法实现，包括分解和合并过程&#10;- 实现快速排序算法，支持随机基准值选择&#10;- 添加测试用例验证排序功能正确性&#10;- 提供完整的排序算法演示代码" />
     <list id="9a6db546-1653-4229-a886-d61c225559eb" name="忽略" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +205,7 @@
       <workItem from="1774782614666" duration="3139000" />
       <workItem from="1776344225152" duration="2763000" />
       <workItem from="1778330338897" duration="742000" />
-      <workItem from="1778331420428" duration="1793000" />
+      <workItem from="1778331420428" duration="2982000" />
     </task>
     <task id="LOCAL-00001" summary="feat(array): 添加三数之和问题的解决方案&#10;&#10;- 实现了使用双指针技术的三数之和算法&#10;- 对输入数组进行排序以优化查找过程&#10;- 添加了跳过重复元素的逻辑以避免重复结果&#10;- 实现了左右指针移动和去重机制&#10;- 添加了对不同情况下的指针调整逻辑&#10;- 包含了测试用例以验证功能正确性">
       <option name="closed" value="true" />
