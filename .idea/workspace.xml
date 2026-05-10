@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07336b64-fdbb-4d96-b126-2623bc7f65a4" name="更改" comment="feat(sorting): 实现归并排序和快速排序算法&#10;&#10;- 添加归并排序算法实现，包括分解和合并过程&#10;- 实现快速排序算法，支持随机基准值选择&#10;- 添加测试用例验证排序功能正确性&#10;- 提供完整的排序算法演示代码" />
+    <list default="true" id="07336b64-fdbb-4d96-b126-2623bc7f65a4" name="更改" comment="feat(sorting): 实现归并排序和快速排序算法&#10;&#10;- 添加归并排序算法实现，包括分解和合并过程&#10;- 实现快速排序算法，支持随机基准值选择&#10;- 添加测试用例验证排序功能正确性&#10;- 提供完整的排序算法演示代码">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="9a6db546-1653-4229-a886-d61c225559eb" name="忽略" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,34 +62,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.demo.executor": "Debug",
-    "Python.mergeSort.executor": "Run",
-    "Python.t15.executor": "Run",
-    "Python.t206.executor": "Run",
-    "Python.t20_1.executor": "Run",
-    "Python.t328.executor": "Run",
-    "Python.t394.executor": "Run",
-    "Python.t394_f (1).executor": "Run",
-    "Python.t394_f.executor": "Run",
-    "Python.t643.executor": "Run",
-    "Python.未命名.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/project/PycharmProjects/Data Structure and Algorithms/LeetCode/栈 队列 哈希表/栈",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.demo.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.mergeSort.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t206.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t20_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t328.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t394.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t394_f (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.t394_f.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t643.executor&quot;: &quot;Run&quot;,
+    &quot;Python.未命名.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/project/PycharmProjects/Data Structure and Algorithms/LeetCode/栈 队列 哈希表/栈&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="Data Structure and Algorithms" is-module-sdk="true">
@@ -204,6 +206,8 @@
       <workItem from="1774608930857" duration="631000" />
       <workItem from="1774782614666" duration="3139000" />
       <workItem from="1776344225152" duration="2763000" />
+      <workItem from="1778330338897" duration="742000" />
+      <workItem from="1778331420428" duration="1793000" />
     </task>
     <task id="LOCAL-00001" summary="feat(array): 添加三数之和问题的解决方案&#10;&#10;- 实现了使用双指针技术的三数之和算法&#10;- 对输入数组进行排序以优化查找过程&#10;- 添加了跳过重复元素的逻辑以避免重复结果&#10;- 实现了左右指针移动和去重机制&#10;- 添加了对不同情况下的指针调整逻辑&#10;- 包含了测试用例以验证功能正确性">
       <option name="closed" value="true" />
