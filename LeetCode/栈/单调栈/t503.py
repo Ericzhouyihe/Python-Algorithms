@@ -20,6 +20,6 @@ if __name__ == "__main__":
     s = Solution()
     print(s.nextGreaterElements([1, 2, 1]))
     print(s.nextGreaterElements([1, 2, 3, 4, 3]))
-    print(s.nextGreaterElements([1, 2, 3, 4, 3, 5]))
     print(s.nextGreaterElements([5, 4, 3, 2, 1]))
     print(s.nextGreaterElements([2, 4]))
+    print(s.nextGreaterElements([1, 2, 3, 4, 3, 5]))
