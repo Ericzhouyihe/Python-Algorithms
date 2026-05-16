@@ -9,9 +9,9 @@ class Solution:
         heights = [0] + heights + [0]
         for i, h in enumerate(heights):
             while stack and heights[stack[-1]] > h:
-                heights = heights[stack.pop()]
+                height = heights[stack.pop()]
                 width = i - stack[-1] - 1
-                res = max(res, heights * width)
+                res = max(res, height * width)
             stack.append(i)
 
         return res
