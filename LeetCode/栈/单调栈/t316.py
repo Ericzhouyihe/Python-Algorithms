@@ -21,9 +21,26 @@ class Solution:
 
         return "".join(stack)
 
+    def removeDuplicateLetters1(self, s: str) -> str:
+        last = {ch: i for i, ch in enumerate(s)}
+        stack = []
+        used = set()
+
+        for i, ch in enumerate(s):
+            if ch in used:
+                continue
+
+            while stack and stack[-1] > ch and last[stack[-1]] > i:
+                used.remove(stack.pop())
+
+            stack.append(ch)
+            used.add(ch)
+
+        return "".join(stack)
+
 
 # 测试
 if __name__ == "__main__":
     s = Solution()
-    print(s.removeDuplicateLetters("bcabc"))
-    print(s.removeDuplicateLetters("cbacdcbc"))
+    print(s.removeDuplicateLetters1("bcabc"))
+    print(s.removeDuplicateLetters1("cbacdcbc"))
