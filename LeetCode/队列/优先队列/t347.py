@@ -10,6 +10,7 @@ class Solution:
     def topKFrequent1(self, nums: List[int], k: int) -> List[int]:
         cnt = Counter(nums)  # 统计频率
         max_cnt = max(cnt.values())  # 最大频率
+        print(cnt)
 
         """
         collections 模块中的一个特殊字典，作用是：
