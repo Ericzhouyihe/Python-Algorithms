@@ -57,43 +57,56 @@ class Solution:
 
         return res
 
-        def inorderTraversal01(self, root: TreeNode) -> List[int]:
-            """
-            二叉树中序遍历(递归实现)
-            :param root: 根节点
-            :return: 中序遍历结果
-            """
-            res = []  # 用于存储遍历结果
+    def inorderTraversal01(self, root: TreeNode) -> List[int]:
+        """
+        二叉树中序遍历(递归实现)
+        :param root: 根节点
+        :return: 中序遍历结果
+        """
+        res = []  # 用于存储遍历结果
 
-            def inorder(node):
-                if not node:
-                    return  # 递归终止条件：节点为空
-                inorder(node.left)  # 递归遍历左子树
-                res.append(node.val)  # 访问当前节点
-                inorder(node.right)  # 递归遍历右子树
+        def inorder(node):
+            if not node:
+                return  # 递归终止条件：节点为空
+            inorder(node.left)  # 递归遍历左子树
+            res.append(node.val)  # 访问当前节点
+            inorder(node.right)  # 递归遍历右子树
 
-            inorder(root)  # 从根节点开始递归
-            return res  # 返回中序遍历结果
+        inorder(root)  # 从根节点开始递归
+        return res  # 返回中序遍历结果
 
-        def inorderTraversal02(self, root:TreeNode) -> List[int]:
-            """
-            二叉树中序遍历(非递归)
-            :param self:
-            :param root:
-            :return:
-            """
-            res = []
-            stack = []
-            cur = root
+    def inorderTraversal02(self, root:TreeNode) -> List[int]:
+        """
+        二叉树中序遍历(非递归)
+        :param root: 根节点
+        :return: 中序遍历结果
+        """
 
-            while cur or stack:
-                while cur:
-                    stack.append(cur)
-                    cur = cur.left
+        res = []
+        stack = []
+        cur = root
 
+        while cur or stack:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+
+            node = stack.pop()
+            res.append(node.val)
+            cur = node.right
+
+        resturn = res
+
+    def postorderTraversal(self, root:TreeNode) -> List[int]:
+        """
+        二叉树后序遍历(递归)
+        :param root: 根节点
+        :return: 后序遍历结果
+        """
+        stack = []
+
+        def inorder(node):
+            while stack:
                 node = stack.pop()
-                res.append(node.val)
-                cur = node.right
-
-            resturn = res
+                if node.right:
 
