@@ -148,3 +148,30 @@ class Solution:
                 root = node.right
 
         return res
+
+    def levelOrder(self, root:TreeNode) -> List[List[int]]:
+        """
+        二叉树层序遍历（广度优先搜索，BFS）
+        :param root: 根节点
+        :return: 二叉树层序遍历（广度优先搜索，BFS）
+        """
+        if not root:
+            return []
+
+        from collections import deque
+        queue = deque([root])
+        order = []
+
+        while queue:
+            level = []
+            size = len(queue)
+            for _ in range(size):
+                curr = queue.popleft()
+                level.append(curr.val)
+                if curr.left:
+                    queue.append(curr.left)
+                if curr.right:
+                    queue.append(curr.right)
+            if level:
+                order.append(level)
+        return order
