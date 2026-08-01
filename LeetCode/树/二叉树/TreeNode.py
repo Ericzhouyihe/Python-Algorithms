@@ -81,7 +81,6 @@ class Solution:
         :param root: 根节点
         :return: 中序遍历结果
         """
-
         res = []
         stack = []
         cur = root
