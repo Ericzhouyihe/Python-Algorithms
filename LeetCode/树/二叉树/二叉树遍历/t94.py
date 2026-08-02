@@ -26,9 +26,6 @@ class Solution:
 # 非递归
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        if not root:
-            return []
-
         res = []
         stack = []
         cur = root
