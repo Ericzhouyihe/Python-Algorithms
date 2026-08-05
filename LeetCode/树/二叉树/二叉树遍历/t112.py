@@ -11,27 +11,28 @@ class TreeNode:
 
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        return self.haspath(root, targetSum, 0)
+
+    def haspath(self, node: TreeNode, targetSum: int, curSum: int):
+        if not node:
+            return False
+        curSum += node.val
+        if node.left == None and node.right == None:
+            return curSum == targetSum
+
+        return self.haspath(node.left, targetSum, curSum) or self.haspath(node.right, targetSum, curSum)
+
+
+class Solution:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if not root:
             return False
+        if not root.left and not root.right:
+            return targetSum == root.val
 
-        targetSum -= root.val
-        if targetSum == 0:
-            return True
-
-        left = self.hasPathSum(root.left, targetSum)
-        right = self.hasPathSum(root.left, targetSum)
-        return left or right
-
-    def haspath(self, node: TreeNode, targetSum: int):
-        if not node:
-            return 0
-        left = self.haspath(node.left, targetSum)
-        right = self.haspath(node.right, targetSum)
-
-        return left + node.val == targetSum or right + node.val == targetSum
+        return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)
 
 
-# 测试
 if __name__ == "__main__":
     root = TreeNode(5)
     root.left = TreeNode(4)
