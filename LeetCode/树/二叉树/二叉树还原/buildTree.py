@@ -20,16 +20,26 @@ class TreeNode:
 # 利用前序与中序遍历序列重建二叉树
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-        def createTree(preorder, inorder, n):
-            """
-            递归构建二叉树
+        """根据前序遍历和中序遍历序列重建二叉树
 
-            参数:
-                preorder: 当前子树的前序遍历序列
-                inorder: 当前子树的中序遍历序列
-                n: 当前子树的节点数
-            返回:
-                TreeNode，当前子树的根节点
+        Args:
+            preorder (List[int]): 二叉树的前序遍历序列
+            inorder (List[int]): 二叉树的中序遍历序列
+
+        Returns:
+            TreeNode: 重建后的二叉树根节点
+        """
+
+        def createTree(preorder, inorder, n):
+            """递归构建二叉树
+
+            Args:
+                preorder (_type_): 当前子树的前序遍历序列
+                inorder (_type_): 当前子树的中序遍历序列
+                n (_type_): 当前子树的节点数
+
+            Returns:
+                _type_: 当前子树的根节点
             """
             if n == 0:
                 return None  # 递归终止条件：子树节点数为 0
@@ -47,3 +57,51 @@ class Solution:
 
         # 从整棵树的前序和中序序列开始递归构建
         return createTree(preorder, inorder, len(inorder))
+
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        """
+        根据中序遍历和后序遍历序列重建二叉树
+
+        参数:
+            inorder: List[int]，二叉树的中序遍历序列
+            postorder: List[int]，二叉树的后序遍历序列
+        返回:
+            TreeNode: 重建后的二叉树根节点
+        """
+
+        def createTree(inorder, postorder, n):
+            """
+            递归构建二叉树
+
+            参数:
+                inorder: 当前子树的中序遍历序列
+                postorder: 当前子树的后序遍历序列
+                n: 当前子树的节点数
+            返回:
+                TreeNode: 当前子树的根节点
+            """
+
+            if n == 0:
+                return None  # 递归终止条件：子树节点数为0，返回空节点
+
+            # 后序遍历的最后一个元素为当前子树的根节点
+            root_val = postorder[n - 1]
+            # 在中序遍历中查找根节点的位置
+            k = 0
+            while inorder[k] != root_val:
+                k += 1
+
+            # 创建根节点
+            node = TreeNode(root_val)
+            # 递归构建左子树
+            # 左子树的中序区间：inorder[0:k]
+            # 左子树的后序区间：postorder[0:k]
+            node.left = createTree(inorder[0:k], postorder[0:k], k)
+            # 递归构建右子树
+            # 右子树的中序区间：inorder[k+1:n]
+            # 右子树的后序区间：postorder[k:n-1]
+            node.right = createTree(inorder[k + 1 : n], postorder[k : n - 1], n - k - 1)
+            return node
+
+        # 从整棵树的中序和后序序列开始递归构建
+        return createTree(inorder, postorder, len(postorder))
