@@ -49,7 +49,7 @@ class Solution:
                 k += 1
             # 创建根节点
             node = TreeNode(inorder[k])
-            # 递归构建左子树
+            # 递归构建左子树 左子树有 k 个节点, 不包含根节点，所以截取 preorder[1:k+1]
             node.left = createTree(preorder[1 : k + 1], inorder[0:k], k)
             # 递归构建右子树
             node.right = createTree(preorder[k + 1 :], inorder[k + 1 :], n - k - 1)
