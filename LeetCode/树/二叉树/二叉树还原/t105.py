@@ -10,9 +10,10 @@ class TreeNode:
 
 
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
 
-        def createTree(preorder, inorder, n):
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> None | TreeNode:
+
+        def createTree(preorder, inorder, n) -> None | TreeNode:
             """递归构建二叉树
 
             Args:
@@ -41,12 +42,12 @@ class Solution:
         return createTree(preorder, inorder, len(inorder))
 
     # 会快很多
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+    def buildTree1(self, preorder: List[int], inorder: List[int]) -> None | TreeNode:
         inorder_dict = {}
         for index, value in enumerate(inorder):
             inorder_dict[value] = index
 
-        def createTree(root_index, left, right):
+        def createTree(root_index, left, right) -> None | TreeNode:
             if left > right:
                 return None
             value = preorder[root_index]
