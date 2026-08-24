@@ -15,6 +15,7 @@ class BinaryIndexedTree:
             self.tree[index] += val
             index += self.lowbit(index)
 
+    # 树状数组的求和
     def query(self, index):
         res = 0
         while index > 0:
