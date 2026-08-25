@@ -1,3 +1,4 @@
+# 单点更新 + 区间求值
 class BinaryIndexedTree:
     def __init__(self, n):
         self.n = n
